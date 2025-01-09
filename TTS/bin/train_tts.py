@@ -1,4 +1,6 @@
 import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from dataclasses import dataclass, field
 
 from trainer import Trainer, TrainerArgs
@@ -10,7 +12,7 @@ from TTS.tts.models import setup_model
 
 @dataclass
 class TrainTTSArgs(TrainerArgs):
-    config_path: str = field(default=None, metadata={"help": "Path to the config file."})
+    config_path: str = field(default="D:\\product\\TTS\\TTS\\config\\config.json", metadata={"help": "Path to the config file."})
 
 
 def main():

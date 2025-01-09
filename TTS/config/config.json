@@ -1,0 +1,27 @@
+{
+    "model": "xtts",
+    "output_path": "output/",
+    "dataset": {
+        "path": "path/to/your/dataset",
+        "meta_file": "metadata.csv",
+        "audio": {
+            "sample_rate": 22050,
+            "num_mels": 80,
+            "hop_length": 256,
+            "win_length": 1024,
+            "fmin": 0,
+            "fmax": 8000
+        }
+    },
+    "training": {
+        "batch_size": 32,
+    "epochs": 1000,
+        "learning_rate": 0.001,
+        "checkpoint_interval": 100,
+        "save_best_only": true
+    },
+    "validation": {
+        "batch_size": 16,
+        "interval": 10
+    }
+}
